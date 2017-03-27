@@ -5,6 +5,8 @@
  */
 package br.com.satc;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Markson
@@ -35,7 +37,46 @@ Média de aproveitamento Conceito
 < 40 E
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+           
+        Scanner entrada = new Scanner(System.in);
+        System.out.println("Digite o preço de etiqueta do produto : ");
+        double preco = entrada.nextDouble();
+        System.out.println("Escolha a condição de pagamento"+" /n"
+                + "1 À vista em dinheiro ou cheque"+" /n"
+                + "2 À vista no cartão de crédito"+" /n"
+                + "3 Em duas vezes"+" /n"
+                + "4 Em três vezes");
+        int pagamento = entrada.nextInt();
+        
+        
+        switch (pagamento) {
+            case 1: {
+                System.out.println("Você recebe 10% de desconto, o preço do "
+                        + "produto será de "+(preco-(preco*0.1))+".");
+                break;
+            }
+            case 2: {
+                System.out.println("Você recebe 15% de desconto, o preço do "
+                        + "produto será de "+(preco-(preco*0.15))+".");
+                break;
+            }
+            case 3: {
+                System.out.println("Será cobrado o preço normal de etiqueta "
+                        + "do produto "+preco+".");
+                break;
+            }
+            case 4: {
+                System.out.println("Você terá que pagar 10% de juros o preço "
+                        + "do produto ficará"+(preco+(preco*1.1))+".");
+                break;
+            }
+
+        
+        
+    }
     }
     
-}
+    }
+    
+    
+
