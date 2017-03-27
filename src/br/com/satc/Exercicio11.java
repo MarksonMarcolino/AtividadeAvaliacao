@@ -38,7 +38,7 @@ Código Condição de pagamento
             break;}
             case 3: {System.out.println("Voce ira pagar "+prod+".");
             break;}
-            case 4: {System.out.println("Voce ira pagar "+(prod*1.1)+".");
+            case 4: {System.out.println("Voce ira pagar "+(prod*1.3)+".");
             break;}
         }
             
