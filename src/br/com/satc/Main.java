@@ -40,7 +40,7 @@ Média de aproveitamento Conceito
         int f = ent.nextInt();
         
         double desconto = 0;
-        double juros = 0;
+        double parcelas = 0;
         
         switch(f){
             
@@ -57,12 +57,12 @@ Média de aproveitamento Conceito
                 System.out.println("Conforme a sua forma de pagamento no Cartão de Credito...\n O valor do seu desconto é : "+ desconto);
                 break;
             }case 4 :{
-                juros = pagamento / 2;
-                System.out.println("Conforme a sua forma de pagamento no Cheque...\n O valor do seu desconto é : "+ juros); 
+                parcelas = pagamento / 2;
+                System.out.println("Conforme a sua forma de pagamento no Cheque...\n O valor do seu desconto é : "+ parcelas); 
                 break;
             }case 5 :{
-                juros =(pagamento * 1.10)/3;
-                System.out.println("Conforme a sua forma de pagamento no Cheque...\n O valor do seu desconto é : "+ juros); 
+                parcelas =(pagamento * 1.10)/3;
+                System.out.println("Conforme a sua forma de pagamento no Cheque...\n O valor do seu desconto é : "+ parcelas); 
                 break;
             }
             
