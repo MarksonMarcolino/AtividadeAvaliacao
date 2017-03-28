@@ -1,14 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package br.com.satc;
 
-/**
- *
- * @author Markson
- */
+import java.util.Scanner;
+
+
 public class Main {
 
     /**
@@ -35,7 +30,46 @@ Média de aproveitamento Conceito
 < 40 E
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        
+        Scanner ent = new Scanner(System.in);
+        
+        System.out.println("Qual é  valor  do pagamento do Produto : ");
+        double pagamento = ent.nextDouble();
+        
+        System.out.println("Qual é a forma de pagamento?\n 1-cheque ,2- dinheiro , 3-cartão de credito , 4- duas vezes , 5- três vezes");
+        int f = ent.nextInt();
+        
+        double desconto = 0;
+        double parcelas = 0;
+        
+        switch(f){
+            
+            case 1:{  
+               desconto = pagamento * 0.10; 
+                System.out.println("Conforme a sua forma de pagamento no Cheque...\n O valor do seu desconto é : "+ desconto);
+                break;
+            }case 2:{
+              desconto = pagamento - ( pagamento * 0.10); 
+                System.out.println("Conforme a sua forma de pagamento em Dinheiro...\n O valor do seu desconto é : "+ desconto); 
+                break;
+            }case 3 :{
+                desconto =pagamento - ( pagamento * 0.15); 
+                System.out.println("Conforme a sua forma de pagamento no Cartão de Credito...\n O valor do seu desconto é : "+ desconto);
+                break;
+            }case 4 :{
+                parcelas = pagamento / 2;
+                System.out.println("Conforme a sua forma de pagamento no Cheque...\n O valor do seu desconto é : "+ parcelas); 
+                break;
+            }case 5 :{
+                parcelas =(pagamento * 1.10)/3;
+                System.out.println("Conforme a sua forma de pagamento no Cheque...\n O valor do seu desconto é : "+ parcelas); 
+                break;
+            }
+            
+        }
+        
+        
+        
     }
     
 }
