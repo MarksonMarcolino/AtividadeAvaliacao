@@ -27,48 +27,40 @@ public class Main {
      * @param args
      */
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        System.out.println("Qual o valor a ser pago pelo prduto? ");
-        float val = input.nextFloat();
-        System.out.println("Qual a forma de pagamento?"
-                + "(D) Dinheiro "
-                + "(Q) Cheque"
-                + "(C) Cartão");
-        char decisao = input.next().charAt(0);
-
-        if ((decisao == 'D') || (decisao == 'Q')) {
-            float calc;
-            float calc2;
-            calc = (float) (val * 0.1);
-            calc2 = (val - calc);
-            System.out.println("Você receberá um desconto de 10% e pagará " + calc2);
-
-        } else if (decisao == 'C') {
-            System.out.println("Você vai pagar á vista ou á prazo? "
-                    + "(V) Á vista"
-                    + "(P) Á prazo");
-            char decisao2 = input.next().charAt(0);
-
-            if (decisao2 == 'V') {
-
-                float calc;
-                float calc2;
-                calc = (float) (val * 0.15);
-                calc2 = (val - calc);
-                System.out.println("Você receberá um desconto de 15% e pagará " + calc2);
-                
-            } if (decisao2 == 'P');
-            System.out.println("Em quantas vezes você vai parcelar? ");
-            int parc = input.nextInt();
-            
-            if (parc=='2'){
-                System.out.println("Você pagará o valor da etiqueta, ou seja, "+val);
-            }
-                
-            
-           
-            
-        }
-
-    }
-}
+   Scanner entrada = new Scanner(System.in);
+         System.out.println("Qual o valor do produto que está na etiqueta: ");
+         float valor = entrada.nextFloat();
+         System.out.println("Qual a forma de pagamento desejada:  \n"
+                 + "A vista em dinheiro ou em cheque (1);\n"
+                 + "A vista no cartão de crédito (2);\n"
+                 + "Em duas vezes (3); \n"
+                 + "Em três vezes (4). ");
+         double vt;
+         double desconto;
+         char pagamento = entrada.next().charAt(0);
+         switch (pagamento) {
+             case '1':
+                 desconto = valor * 0.1;
+                 vt = valor - desconto;
+                 System.out.println("O valor total é " + vt + ".");
+                 break;
+             case '2':
+                 desconto = valor * 0.15;
+                 vt = valor - desconto;
+                 System.out.println("O valor total é " + vt + ".");
+                 break;
+             case '3':
+                 vt = valor;
+                 System.out.println("O valor total é " + vt + ".");
+                 break;
+             case '4':
+                 vt = valor * 1.1;
+                System.out.println("O valor total é " + vt + ".");
+                break;
+ 
+         }
+ 
+      }
+     
+ 
+  }
